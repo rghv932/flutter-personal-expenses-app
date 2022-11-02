@@ -27,9 +27,10 @@ class MyApp extends StatelessWidget {
               ),
             ),
         appBarTheme: AppBarTheme(
-          toolbarTextStyle: TextStyle(
+          titleTextStyle: TextStyle(
             fontFamily: 'OpenSans',
             fontSize: 20,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -50,10 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
   // String titleInput;
   // String amountInput;
   final List<Transaction> _userTransactions = [
-    Transaction(
-        id: 't1', title: 'New Shoes', amount: 100, date: DateTime.now()),
-    Transaction(
-        id: 't2', title: 'New Books', amount: 200, date: DateTime.now()),
+    // Transaction(
+    //     id: 't1', title: 'New Shoes', amount: 100, date: DateTime.now()),
+    // Transaction(
+    //     id: 't2', title: 'New Books', amount: 200, date: DateTime.now()),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
