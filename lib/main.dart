@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter - Personal Expenses App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSwatch(accentColor: Colors.green),
       ),
       home: MyHomePage(),
     );
