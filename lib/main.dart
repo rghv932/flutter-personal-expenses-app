@@ -54,9 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
   // String amountInput;
   final List<Transaction> _userTransactions = [
     Transaction(
-        id: 't1', title: 'New Shoes', amount: 100, date: DateTime.now()),
+        id: 't1', title: 'New Shoes', amount: 100, date: DateTime.now().subtract(Duration(days: 1))),
     Transaction(
         id: 't2', title: 'New Books', amount: 200, date: DateTime.now()),
+    Transaction(
+        id: 't2', title: 'New Bookssss', amount: 100, date: DateTime.now().subtract(Duration(days: 2))),
   ];
 
   List<Transaction> get _recentTransactions {
