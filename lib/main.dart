@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Flutter - Personal Expenses App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -34,6 +33,7 @@ class MyApp extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
+          color: Colors.amber
         ),
       ),
       home: MyHomePage(),
