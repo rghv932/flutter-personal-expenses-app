@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         colorScheme: ColorScheme.fromSwatch(accentColor: Colors.green),
+        //errorColor: Colors.red,
         fontFamily: 'Quicksand',
         textTheme: ThemeData.light().textTheme.copyWith(
               titleSmall: const TextStyle(
@@ -58,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Transaction(
         id: 't2', title: 'New Books', amount: 200, date: DateTime.now()),
     Transaction(
-        id: 't2', title: 'New Bookssss', amount: 100, date: DateTime.now().subtract(Duration(days: 2))),
+        id: 't3', title: 'New Bookssss', amount: 100, date: DateTime.now().subtract(Duration(days: 2))),
   ];
 
   List<Transaction> get _recentTransactions {
@@ -90,6 +91,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  void _deleteTransaction(String id){
+    setState(() {
+      _userTransactions.removeWhere((tx) => tx.id == id);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Chart(_recentTransactions),
-            TransactionList(_userTransactions),
+            TransactionList(_userTransactions, _deleteTransaction),
           ],
         ),
       ),
